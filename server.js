@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var notesRoutes = require('./routes/notes_routes');
 var passport = require('passport');
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/notesapp_development');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/notesapp_development');
 
 var app = express();
 app.set('appSecret', process.env.SECRET || 'changethischangethis!');
